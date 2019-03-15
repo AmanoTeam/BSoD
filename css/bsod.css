@@ -1,0 +1,61 @@
+@font-face {
+    font-family: Segoe UI;
+    src:
+        local("Segoe UI Light"),
+        url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff2) format("woff2"),
+        url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff) format("woff"),
+        url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf) format("truetype");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Segoe UI;
+    src:
+        local("Segoe UI Semilight"),
+        url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff2) format("woff2"),
+        url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff) format("woff"),
+        url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf) format("truetype");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Segoe UI;
+    src:
+        local("Segoe UI"),
+        url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2) format("woff2"),
+        url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff) format("woff"),
+        url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf) format("truetype");
+    font-weight: 400;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Segoe UI Light";
+  font-weight: 300;
+}
+
+body {
+  font-family: "Segoe UI";
+  color: #FFF;
+  background: #1A5A9B;
+  margin: 0;
+}
+
+main {
+  margin: 10% 30%;
+}
+
+.emotion {
+  font-family: "Segoe UI";
+  font-size: 8em;
+  margin: 0;
+}
+
+.description {
+  font-size: 1.4em;
+  margin-bottom: 3em;
+}
+
+footer small {
+  font-size: 0.8em;
+}
