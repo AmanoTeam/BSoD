@@ -35,7 +35,7 @@
     $.ajax({
       url: "https://api.amanoteam.ml/getPercentage",
     }).done(function(data) {
-      $("#progress").innerHTML("("data+"% complete)");
+      $("#progress").innerHTML("("+data+"% complete)");
     });
     setTimeout(update_progress, 10000);
 }
