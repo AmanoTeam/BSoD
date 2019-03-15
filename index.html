@@ -20,14 +20,26 @@
     <header>
       <h1 class="emotion">:(</h1>
     </header>
-    <p class="description">We are working on a new website to improve the usability and visual identity of our team.&nbsp;(0% complete)</p>
+    <p class="description">We are working on a new website to improve the usability and visual identity of our team.&nbsp;<span id="progress"></span></p>
     <footer>
       <p><small>If you'd like to know more, you can join us on our Telegram channel:<span><a style="text-decoration:none; color: #FFF" href="https://t.me/AmanoTeam">&nbsp;@AmanoTeam</a></span></small></p>
     </footer>
   </main>
 
-    
-
   </body>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <script type="text/javascript">function update_progress() {
+
+    $.ajax({
+      url: "https://api.amanoteam.ml/getPercentage",
+    }).done(function(data) {
+      $("#progress").innerHTML("("data+"% complete)");
+    });
+    setTimeout(update_progress, 10000);
+}
+
+update_progress();</script>
 
 </html>
