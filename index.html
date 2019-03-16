@@ -32,10 +32,12 @@
 
   <script type="text/javascript">function update_progress() {
 
-    $.ajax({
-      url: "https://api.amanoteam.ml/getpercentage",
-    }).done(function(data) {
-      $("#progress").innerHTML("("+data+"% complete)");
+    $.ajax(
+      {
+        url: "https://api.amanoteam.ml/getpercentage/",
+      }
+    ).done(function(data) {
+      document.getElementById('progress').innerHTML = "("+data+"% complete)";
     });
     setTimeout(update_progress, 10000);
 }
