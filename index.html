@@ -5,12 +5,8 @@
   <meta charset="UTF-8">
   <title>Soon... | AmanoTeam</title>
   <link rel="icon" href="images/ico.png">
-
-
       <meta name="theme-color" content="#1A5A9B">
       <link rel="stylesheet" href="css/bsod.css">
-
-
 </head>
 
   <body>
@@ -20,15 +16,25 @@
     <header>
       <h1 class="emotion">:(</h1>
     </header>
-    <p class="description">We are working on a new website to improve the usability and visual identity of our team.&nbsp;<span id="progress"></span></p>
-    <footer>
-      <p><small>If you'd like to know more, you can join us on our Telegram channel:<span><a style="text-decoration:none; color: #FFF" href="https://t.me/AmanoTeam">&nbsp;@AmanoTeam</a></span></small></p>
-    </footer>
+    <a class="description">We are working on a new website to improve the usability and visual identity of our team.<br>Once we finish our new website, it will be available for you.<p><span id="progress">&nbsp;</span></p></a>
+    <table>
+      <tr>
+        <td><div id="qrcode" style="padding: 16px; width: 120px; height: 120px; background: #fff; display: inline-block"></div></td>
+        <td style="position: absolute; margin-top: -23px;">
+          <p style="margin-left: 8px"><small>To try out our new website and send your suggestions about it, visit<br><a style="text-decoration:none; color: #FFF" href="https://beta.amanoteam.ml">https://beta.amanoteam.ml</a></small></p>
+          <p style="margin-left: 8px"><small>If you'd like to know more, you can join us on our Telegram channel:<span><a style="text-decoration:none; color: #FFF" href="https://t.me/AmanoTeam">&nbsp;@AmanoTeam</a></span></small></p>
+        </td>
+      </tr>
+    </table>
   </main>
 
   </body>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <script src="js/qrcode.js"></script>
+
+  <script src="js/bsod.js"></script>
 
   <script type="text/javascript">function update_progress() {
 
@@ -37,7 +43,7 @@
         url: "https://api.amanoteam.ml/getpercentage/",
       }
     ).done(function(data) {
-      document.getElementById('progress').innerHTML = "("+data+"% complete)";
+      document.getElementById('progress').innerHTML = data+"% complete";
     });
     setTimeout(update_progress, 10000);
 }
