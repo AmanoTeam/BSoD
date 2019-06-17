@@ -16,7 +16,7 @@
     <header>
       <h1 class="emotion">:(</h1>
     </header>
-    <a class="description">We are working on a new website to improve the usability and visual identity of our team.<br>Once we finish our new website, it will be available for you.<p><span id="progress">&nbsp;</span></p></a>
+    <a class="description">We are working on a new website to improve the usability and visual identity of our team.<br>Once we finish our new website, it will be available for you.<p><span id="progress">0</span>% complete</p></a>
     <table>
       <tr>
         <td><div id="qrcode" style="padding: 16px; width: 110px; height: 110px; background: #fff; display: inline-block"></div></td>
@@ -43,7 +43,7 @@
         url: "https://api.amanoteam.ml/getpercentage/",
       }
     ).done(function(data) {
-      document.getElementById('progress').innerHTML = data+"% complete";
+      document.getElementById('progress').innerHTML = data;
     });
     setTimeout(update_progress, 10000);
 }
