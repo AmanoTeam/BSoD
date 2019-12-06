@@ -30,7 +30,7 @@
 
   </body>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
   <script src="js/qrcode.js"></script>
 
@@ -40,7 +40,7 @@
 
     $.ajax(
       {
-        url: "https://api.amanoteam.ml/getpercentage/",
+        url: "https://api.amanoteam.com/getpercentage/",
       }
     ).done(function(data) {
       document.getElementById('progress').innerHTML = data;
